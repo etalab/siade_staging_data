@@ -1,0 +1,27 @@
+---
+params:
+  nomNaissance: HOCHON
+  listePrenoms: VALENTIN
+status: 200
+payload: |-
+  {
+     "indicateur": "BENEFICIAIRE_AVEC_PARTICIPATION_FINANCIERE",
+     "prestations": [   {
+        "cd": "MMN1001",
+        "libelle": "CMU de base",
+        "dtOuvertureDroit": "2022-02-01",
+        "etat":       {
+           "cd": 40,
+           "libelle": "Clos",
+           "dtEffet": "2020-02-01"
+        },
+        "organismeRattachement":       {
+           "cd": 17,
+           "libelle": "CCMSA"
+        },
+        "organismeGestionnaire":       {
+           "cd": 2915,
+           "libelle": "MUTUALITE SOCIALE AGRICOLE AIN-RHONE"
+        }
+     }]
+  }
