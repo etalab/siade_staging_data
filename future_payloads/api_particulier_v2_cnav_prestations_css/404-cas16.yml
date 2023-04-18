@@ -1,0 +1,10 @@
+---
+params:
+  nomNaissance: BUFFET
+  listePrenoms: NICOLAS
+status: 404
+payload: |-
+  {
+     "error": "Il n'a pas été possible de récupérer l'information sur la personne",
+     "error_code": 40411
+  }

@@ -1,0 +1,27 @@
+---
+params:
+  nomNaissance: GODIN
+  listePrenoms: ERMENGARDI
+status: 200
+payload: |-
+  {
+     "indicateur": "BENEFICIAIRE_SANS_PARTICIPATION_FINANCIERE",
+     "prestations": [   {
+        "cd": "MMN1502",
+        "libelle": "CMU complémentaire gérée par un organisme complémentaire",
+        "dtOuvertureDroit": "2022-02-01",
+        "etat":       {
+           "cd": 10,
+           "libelle": "Actif",
+           "dtEffet": "2020-02-01"
+        },
+        "organismeRattachement":       {
+           "cd": 111,
+           "libelle": "CNAMTS"
+        },
+        "organismeGestionnaire":       {
+           "cd": 3710,
+           "libelle": "CAISSE PRIMAIRE D'ASSURANCE MALADIE DE L'INDRE-ET-LOIRE"
+        }
+     }]
+  }

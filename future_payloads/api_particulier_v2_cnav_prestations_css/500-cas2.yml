@@ -1,0 +1,10 @@
+---
+params:
+  nomNaissance: 
+  listePrenoms: ANNE-LAURE
+status: 500
+payload: |-
+  {
+     "error": "Erreur technique non spécifiée",
+     "error_code": 50001
+  }

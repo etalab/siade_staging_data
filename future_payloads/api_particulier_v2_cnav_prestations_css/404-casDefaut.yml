@@ -1,0 +1,10 @@
+---
+params:
+  nomNaissance: 
+  listePrenoms: 
+status: 404
+payload: |-
+  {
+     "error": "Aucune personne n'a été trouvée dans la base",
+     "error_code": 40409
+  }
