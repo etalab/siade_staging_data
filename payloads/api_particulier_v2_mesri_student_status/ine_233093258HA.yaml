@@ -1,0 +1,25 @@
+---
+description: 'Étudiant 233093258HA inscrit (appel par INE) Vérification des accents non renvoyés'
+params:
+  ine: '233093258HA'
+status: 200
+payload: |-
+  {
+    "ine": "233093258HA",
+    "nom": "NOMAAAAAAIIIIOOOOOUUUUEEEECYN",
+    "prenom": "Prenomaaaaaaiiiiooooouuuueeeecyn",
+    "dateNaissance": "2010-01-01",
+    "inscriptions": [
+      {
+        "dateDebutInscription": "2023-09-01",
+        "dateFinInscription": "2024-06-31",
+        "statut": "inscrit",
+        "codeCommune": "75020",
+        "etablissement": {
+          "uai": "0750106H",
+          "nomEtablissement": "ECOLE TECHNOLOGIQUE PRIVEE"
+        },
+        "regime": "formation initiale"
+      }
+    ]
+  }
