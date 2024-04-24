@@ -5,13 +5,13 @@ description: |-
   L'endpoint est appellé avec le jeton FranceConnect + le recipient.
 
 params:
-  given_name: "Georges"
-  family_name: "CNAF"
-  birthdate: "2002-01-01"
-  gender: "male"
-  birthplace: "75002"
-  birthcountry: "99100"
-  preferred_username: "MARTIN"
+  codeInseeLieuDeNaissance: "75002"
+  codePaysLieuDeNaissance: "99100"
+  nomNaissance: "CNAF"
+  nomUsage: "MARTIN"
+  prenoms: ["Georges"]
+  recipient: "13002526500013"
+  sexe: "M"
 status: 200
 payload: |-
   {
