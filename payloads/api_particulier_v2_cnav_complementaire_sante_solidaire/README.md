@@ -266,6 +266,68 @@ Ce cas permet de tester :
 
   </p>
   </details>
+* [beneficiaire_avec_participation_financiere_etranger_femme_200.yml](beneficiaire_avec_participation_financiere_etranger_femme_200.yml)
+
+  Status `200`
+
+  ## Bénéficiaire né à l'étranger sans participation financière femme - 200
+
+Ce cas permet de tester :
+- [Param. appel] Nom d'usage
+- [Param. appel] Nom de naissance
+- [Param. appel] Deux prénoms
+- [Param. appel] Date de naissance (jour,mois,année)
+- [Param. appel] sexe féminin
+- [Réponse] statut bénéficiaire de la complémentaire santé solidaire SANS participation financière
+
+  <details><summary>Paramètres</summary>
+  <p>
+
+  ```json
+  {
+    "nomUsage": "PLUSSE",
+    "nomNaissance": "GERVINAT",
+    "prenoms": [
+      "MADELEINE",
+      "LEA"
+    ],
+    "anneeDateDeNaissance": 1976,
+    "moisDateDeNaissance": 8,
+    "jourDateDeNaissance": 24,
+    "codeInseeLieuDeNaissance": null,
+    "codePaysLieuDeNaissance": "99131",
+    "sexe": "F"
+  }
+  ```
+
+  </p>
+  </details>
+
+  <details><summary>Réponse API</summary>
+  <p>
+
+  ```json
+  {
+    "status": "beneficiaire_sans_participation_financiere",
+    "dateDebut": "2024-10-01",
+    "dateFin": "2025-10-01"
+  }
+  ```
+
+  </p>
+  </details>
+
+  <details><summary>Commande cURL</summary>
+  <p>
+
+  ```bash
+  curl -H "X-Api-Key: $token" \
+    -G -d 'nomUsage=PLUSSE' -d 'nomNaissance=GERVINAT' -d 'prenoms[]=MADELEINE' -d 'prenoms[]=LEA' -d 'anneeDateDeNaissance=1976' -d 'moisDateDeNaissance=8' -d 'jourDateDeNaissance=24' -d 'codeInseeLieuDeNaissance=' -d 'codePaysLieuDeNaissance=99131' -d 'sexe=F' \
+    --url "https://staging.particulier.api.gouv.fr/api/v2/complementaire-sante-solidaire"
+  ```
+
+  </p>
+  </details>
 * [beneficiaire_avec_participation_financiere_femme_200.yml](beneficiaire_avec_participation_financiere_femme_200.yml)
 
   Status `200`

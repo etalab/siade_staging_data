@@ -41,6 +41,19 @@ Ce cas permet de tester :
   ""reason"": ""timeout of 10000 ms exceeded"",
   ""message"": ""Une erreur est survenue lors de l'appel au fournisseur de donnée""
 }"
+,"## Bénéficiaire né à l'étranger sans participation financière femme - 200
+
+Ce cas permet de tester :
+- [Param. appel] Nom d'usage
+- [Param. appel] Nom de naissance
+- [Param. appel] Deux prénoms
+- [Param. appel] Date de naissance (jour,mois,année)
+- [Param. appel] sexe féminin
+- [Réponse] statut bénéficiaire de la complémentaire santé solidaire SANS participation financière","{""nomUsage"":""PLUSSE"",""nomNaissance"":""GERVINAT"",""prenoms"":[""MADELEINE"",""LEA""],""anneeDateDeNaissance"":1976,""moisDateDeNaissance"":8,""jourDateDeNaissance"":24,""codeInseeLieuDeNaissance"":null,""codePaysLieuDeNaissance"":""99131"",""sexe"":""F""}",200,"{
+  ""status"": ""beneficiaire_sans_participation_financiere"",
+  ""dateDebut"": ""2024-10-01"",
+  ""dateFin"": ""2025-10-01""
+}"
 ,"## Bénéficiaire avec participation financière femme - 200
 
 Ce cas permet de tester :
