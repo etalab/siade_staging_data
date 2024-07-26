@@ -152,8 +152,8 @@ Ce cas permet de tester :
   ```json
   {
     "status": "non_beneficiaire_css",
-    "dateDebut": "null",
-    "dateFin": "null"
+    "dateDebut": null,
+    "dateFin": null
   }
   ```
 
@@ -493,6 +493,68 @@ L'endpoint est appellé avec le jeton FranceConnect + le recipient.
 
   ```bash
   curl -H "Authorization: Bearer $token_france_connect" --url "https://staging.particulier.api.gouv.fr/api/v2/complementaire-sante-solidaire?recipient=13002526500013"
+  ```
+
+  </p>
+  </details>
+* [non_beneficaire_css_homme_200.yml](non_beneficaire_css_homme_200.yml)
+
+  Status `200`
+
+  ## Non-bénéficiaire homme - 200
+
+Ce cas permet de tester :
+- [Param. appel] Nom d'usage
+- [Param. appel] Nom de naissance
+- [Param. appel] 2 prénoms
+- [Param. appel] Date de naissance (jour,mois,année)
+- [Param. appel] sexe masculin
+- [Réponse] Non bénéficiaire de la complémentaire santé solidaire
+
+  <details><summary>Paramètres</summary>
+  <p>
+
+  ```json
+  {
+    "nomUsage": "VERTIN",
+    "nomNaissance": "HUBOT",
+    "prenoms": [
+      "PIERRE-MARIE",
+      "JEREMY"
+    ],
+    "anneeDateDeNaissance": 1968,
+    "moisDateDeNaissance": 11,
+    "jourDateDeNaissance": 15,
+    "codeInseeLieuDeNaissance": "33063",
+    "codePaysLieuDeNaissance": "99100",
+    "sexe": "M"
+  }
+  ```
+
+  </p>
+  </details>
+
+  <details><summary>Réponse API</summary>
+  <p>
+
+  ```json
+  {
+    "status": "non_beneficiaire_css",
+    "dateDebut": null,
+    "dateFin": null
+  }
+  ```
+
+  </p>
+  </details>
+
+  <details><summary>Commande cURL</summary>
+  <p>
+
+  ```bash
+  curl -H "X-Api-Key: $token" \
+    -G -d 'nomUsage=VERTIN' -d 'nomNaissance=HUBOT' -d 'prenoms[]=PIERRE-MARIE' -d 'prenoms[]=JEREMY' -d 'anneeDateDeNaissance=1968' -d 'moisDateDeNaissance=11' -d 'jourDateDeNaissance=15' -d 'codeInseeLieuDeNaissance=33063' -d 'codePaysLieuDeNaissance=99100' -d 'sexe=M' \
+    --url "https://staging.particulier.api.gouv.fr/api/v2/complementaire-sante-solidaire"
   ```
 
   </p>
