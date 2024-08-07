@@ -1,0 +1,30 @@
+
+---
+description: |-
+  ## Bénéficiaire sans participation financière femme avec date de fin passée - 200
+  
+  Ce cas permet de tester :
+  - [Param. appel] Nom d'usage
+  - [Param. appel] Nom de naissance
+  - [Param. appel] 1 prénom
+  - [Param. appel] Date de naissance (jour,mois,année)
+  - [Param. appel] Sexe feminin
+  - [Réponse] Statut bénéficiaire de la complémentaire santé solidaire SANS participation financière
+params:
+  nomUsage: 'GARROS'
+  nomNaissance: 'LENGLEN'
+  prenoms:
+    - 'SUZANNE'
+  anneeDateDeNaissance: 1994
+  moisDateDeNaissance: 1
+  jourDateDeNaissance: 1
+  codeInseeLieuDeNaissance: '44109'
+  codePaysLieuDeNaissance: '99100' #Bénéficiaire née en France
+  sexe: 'F'
+status: 200
+payload: |-
+  {
+    "status": "beneficiaire_sans_participation_financiere",
+    "dateDebut": "2023-08-06",
+    "dateFin": "2024-08-06"
+  }
