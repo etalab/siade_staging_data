@@ -36,7 +36,7 @@ payload: |-
         "codeCategorieInscription": 1,
         "categorie": {
           "code": "VC",
-          "libelle": "PERSONNE SANS EMPLOI DISPONIBLE DUREE INDETERMINEE PLEIN TPS",
+          "libelle": "PERSONNE SANS EMPLOI DISPONIBLE DUREE INDETERMINEE PLEIN TPS"
         }
       }
     },
