@@ -710,6 +710,90 @@ Ce cas permet de tester :
 
   </p>
   </details>
+* [200-seul-sans_enfant-qf_846.yaml](200-seul-sans_enfant-qf_846.yaml)
+
+  Status `200`
+
+  ## seul - sans enfant - QF CAF de 846
+
+Ce cas permet de tester : 
+- [Param. appel] Lieu de naissance en France
+- [Param. appel] Sexe feminin
+- [Param. appel] Deux prénoms
+- [Réponse] Un seul allocataire
+- [Réponse] Absence d’enfants
+- [Réponse] Quotient familial de 846  
+
+  <details><summary>Paramètres</summary>
+  <p>
+
+  ```json
+  {
+    "codeInseeLieuDeNaissance": "75056",
+    "codePaysLieuDeNaissance": "99100",
+    "sexe": "M",
+    "nomNaissance": "LEFEBVRE",
+    "prenoms": [
+      "NICOLAS",
+      "ANTOINE"
+    ],
+    "anneeDateDeNaissance": 1992,
+    "moisDateDeNaissance": 4
+  }
+  ```
+
+  </p>
+  </details>
+
+  <details><summary>Réponse API</summary>
+  <p>
+
+  ```json
+  {
+    "regime": "CAF",
+    "allocataires": [
+      {
+        "nomNaissance": "LEFEBVRE",
+        "nomUsage": null,
+        "prenoms": "NICOLAS ANTOINE",
+        "anneeDateDeNaissance": "1992",
+        "moisDateDeNaissance": "04",
+        "jourDateDeNaissance": "10",
+        "sexe": "M"
+      }
+    ],
+    "enfants": [
+  
+    ],
+    "adresse": {
+      "identite": "Monsieur LEFEBVRE NICOLAS",
+      "complementInformation": null,
+      "complementInformationGeographique": null,
+      "numeroLibelleVoie": "15 BOULEVARD HAUSSMANN",
+      "lieuDit": null,
+      "codePostalVille": "75008 PARIS",
+      "pays": "FRANCE"
+    },
+    "quotientFamilial": 846,
+    "annee": 2024,
+    "mois": 12
+  }
+  ```
+
+  </p>
+  </details>
+
+  <details><summary>Commande cURL</summary>
+  <p>
+
+  ```bash
+  curl -H "X-Api-Key: $token" \
+    -G -d 'codeInseeLieuDeNaissance=75056' -d 'codePaysLieuDeNaissance=99100' -d 'sexe=M' -d 'nomNaissance=LEFEBVRE' -d 'prenoms[]=NICOLAS' -d 'prenoms[]=ANTOINE' -d 'anneeDateDeNaissance=1992' -d 'moisDateDeNaissance=4' \
+    --url "https://staging.particulier.api.gouv.fr/api/v2/composition-familiale-v2"
+  ```
+
+  </p>
+  </details>
 * [200-seul-sans_enfant-qf_caf_2550.yaml](200-seul-sans_enfant-qf_caf_2550.yaml)
 
   Status `200`
