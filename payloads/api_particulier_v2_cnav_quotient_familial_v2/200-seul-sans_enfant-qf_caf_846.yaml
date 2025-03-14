@@ -5,7 +5,7 @@ description: |-
 
   Ce cas permet de tester : 
   - [Param. appel] Lieu de naissance en France
-  - [Param. appel] Sexe feminin
+  - [Param. appel] Sexe masculin
   - [Param. appel] Deux prénoms
   - [Réponse] Un seul allocataire
   - [Réponse] Absence d’enfants
