@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'byebug'
 require 'date'
 require 'yaml'
@@ -8,15 +10,16 @@ jwt_hash_secret = 'ea0a029b813836b17cb574fa53d7a626302389f2fa16a7b0596e47c317ebd
 jwt_hash_algo = 'HS256'
 
 root_path = File.expand_path(File.join(File.dirname(__FILE__), '..'))
-all_scopes = YAML.load_file(File.join(root_path, 'data', 'siade_authorizations.yml'), aliases: true)['shared'].values.flatten.uniq
+all_scopes = YAML.load_file(File.join(root_path, 'data', 'siade_authorizations.yml'),
+                            aliases: true)['shared'].values.flatten.uniq
 
-scopes = ARGV.count == 0 ? all_scopes : ARGV
+scopes = ARGV.count.zero? ? all_scopes : ARGV
 
 token_payload = {
   uid: SecureRandom.uuid,
-  jti: "00000000-0000-0000-0000-000000000000",
-  scopes: scopes,
-  sub: "staging",
+  jti: '00000000-0000-0000-0000-000000000000',
+  scopes:,
+  sub: 'staging',
   iat: Time.now.to_i,
   version: '1.0',
   exp: DateTime.now.next_year(10).to_time.to_i

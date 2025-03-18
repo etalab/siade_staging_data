@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'byebug'
 require 'fileutils'
 require 'yaml'
@@ -13,7 +15,7 @@ require 'open_api_schema_to_example'
 include OpenAPIHelpers
 
 if ARGV[0].nil?
-  puts "Usage: #{$0} <operation_id>"
+  puts "Usage: #{$PROGRAM_NAME} <operation_id>"
   exit 1
 elsif ARGV[0].start_with?('api_entreprise')
   api = 'api_entreprise'
@@ -45,7 +47,6 @@ if api == 'api_entreprise'
   end
 end
 
-
 FileUtils.mkdir_p(@payload_folder_path)
 
 def create_payload_file(name, status, payload)
@@ -57,7 +58,7 @@ def create_payload_file(name, status, payload)
     data = {
       'params' => generate_params,
       'status' => status.to_i,
-      'payload' => JSON.pretty_generate(payload),
+      'payload' => JSON.pretty_generate(payload)
     }
 
     f.write(data.to_yaml)
@@ -68,8 +69,8 @@ def generate_params
   @operation_id_params.each_with_object({}) do |param, hash|
     default_param = param['schema']['nullable'] ? nil : 'example'
     hash[param['name']] = param['schema']['example'] ||
-      param['schema']['enum']&.first ||
-      default_param
+                          param['schema']['enum']&.first ||
+                          default_param
   end
 end
 
@@ -80,7 +81,7 @@ end
     status,
     status,
     OpenAPISchemaToExample.new(
-      response['content']['application/json']['schema'],
+      response['content']['application/json']['schema']
     ).perform
   )
 end
