@@ -1,0 +1,26 @@
+  ---
+description: |-
+  ## connexion Internet instable
+params:
+  nomNaissance: 'SITUDI'
+  prenoms:
+  - 'HELENE'
+  anneeDateNaissance: 2002
+  moisDateNaissance: 12
+  jourDateNaissance: 5
+  codeCogInseeCommuneNaissance: '08480'
+  codeCogInseePaysNaissance: '99100'
+  sexeEtatCivil: 'M'
+status: 0
+payload: |-
+  {
+    "errors": [
+      {
+        "code": "00000",
+        "title": "connexion Internet instable",
+        "detail": "connexion Internet instable.",
+        "source": null,
+        "meta": {}
+      }
+    ]
+  }
