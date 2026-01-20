@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'byebug'
 
 lib_folder = File.expand_path('../lib', File.dirname(__FILE__))
